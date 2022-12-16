@@ -1,0 +1,22 @@
+TODO:
+
+Sort out static
+Setup basic deployment version
+create home page to include sidebar/topbar with all available programs
+configure permissions, new users shouldnt have access to all programs immediatly
+
+    Sage:
+        Infinite sideways scrolling worldmap/research 3D interactive globe
+        Shipping routes
+        Country info (allies, enemies, neutral etc)
+        Publicly known military movements
+        Auto AI researcher
+        Allow manually writing/updating info
+
+    Database:
+        Create database of known WEF members
+        Columns: Country, position, power score (higher score = more power), Name, Family?
+
+    Ethereal:
+        Secure encrypted chat messaging
+

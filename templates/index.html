@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Log In{% endblock %}</title>
+    {% block styles %}
+        <link rel="stylesheet" href="{% static 'accounts/login.css' %}"/>
+        <link rel="stylesheet" href="{% static 'base.css' %}"/>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <div class="login-page">
+        <div class="form">
+            <div class="login login-header">
+                 <h2>Strife</h2>
+            </div>
+            <form method="post" class="login-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

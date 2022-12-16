@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block styles %}
+        <link rel="stylesheet" href="{% static 'base.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <h1>Hello World!</h1>
+    <p>Welcome to my first Django project!</p>
+
+
+    Figure out what's going on here, why section above isn't showing even tho user is authenticated
+    Figure out static connection to enable styles and favicon
+    <p>Test</p>
+
+    <a href="/sage"><button type="submit">Sage</button></a>
+    <a href="/accounts/logout"><button type="submit">Logout</button></a>
+{% endblock %}

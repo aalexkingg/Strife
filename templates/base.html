@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Strife{% endblock %}</title>
+
+    <link rel="icon" href="{% static 'favicon.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'sidebar/sidebar.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+    <div class="sidenav">
+        {% block sidebar %}
+        {# Using views set active class  to highlight page user is on #}
+
+        <a class="sidebar-button"><i class="fa fa-fw fa-bars"></i></a>
+
+        {% url 'home' as url %}
+        <a href="{{ url }}" class="{% if request.path == url %}active{% endif %}"><i class="fa fa-fw fa-home"></i>Home</a>
+
+        {% url 'sage' as url %}
+        <a href="{{ url }}" class="{% if request.path == url %}active{% endif %}"><i class="fa fa-fw fa-globe"></i>Sage</a>
+
+        {% url 'ethereal' as url %}
+        <a href="{{ url }}" class="{% if request.path == url %}active{% endif %}"><i class="fa fa-fw fa-comments"></i>Ethereal</a>
+
+        <a href="/accounts/logout" class="logout">Logout</a>
+        {% endblock %}
+    </div>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
